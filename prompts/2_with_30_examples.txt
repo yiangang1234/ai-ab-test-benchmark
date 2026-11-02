@@ -1,0 +1,202 @@
+You will predict the outcome of real headline tests from Upworthy, a US viral-news website (2013-2015).
+In each test, real Facebook-era readers were randomly split, and each group saw one headline option. The option with the highest click-through rate (CTR) won.
+
+First, study these 30 solved examples from other Upworthy tests. They are not in the quiz.
+
+=== EXAMPLES START ===
+Below are 30 real headline tests from Upworthy (2013-2015). Each test showed the headlines to randomly split real readers. Click-through rate (CTR) is shown for each option, then the outcome.
+Outcome 'TIE' means the differences were too small to matter.
+
+Example 1 (3 options)
+  A: What’s The Difference Between 2 Cats And Too Many Cats?  [CTR 0.52%]
+  B: You've Probably Seen Tons Of Cat Videos, But Here's The Coolest Cat Of Them All  [CTR 0.94%]
+  C: Not A Cat Person? Maybe You Just Haven't Met Scooter ... Cause He's One Cool Cat.  [CTR 0.56%]
+  Outcome: Winner B
+
+Example 2 (2 options)
+  A: The Worst Online Dating Site In The History Of The World  [CTR 2.72%]
+  B: GOD HATES... SINGLE PEOPLE?  [CTR 2.49%]
+  Outcome: TIE
+
+Example 3 (4 options)
+  A: A Lovely Young Lady Sings Her Heart Out About Autism  [CTR 0.68%]
+  B: Her Empowering Rendition Of This Uber Popular Song Will Ring True For People All Around The World  [CTR 1.17%]
+  C: This Girl Wrote New Lyrics For 'Let It Go,' And They Are Quite Stunning  [CTR 1.92%]
+  D: She Rewrote A Super Popular Song To Explain How She Feels About Her Diagnosis  [CTR 1.06%]
+  Outcome: Winner C
+
+Example 4 (4 options)
+  A: See A Comedian Tear Apart All The Most Hypocritical Anti-Gay Arguments in A Hilariously Vicious Rant  [CTR 4.62%]
+  B: Fantastic: Watch A Comedian Bring The House Down In Support of Gay Rights  [CTR 3.39%]
+  C: A Comedian Tears Apart A Classic Anti-Gay Argument In A Hilarious 3 Minute Rant  [CTR 7.03%]
+  D: Watch A Comedian Go On The Offensive In Defense Of Gay Rights  [CTR 3.46%]
+  Outcome: Winner C
+
+Example 5 (3 options)
+  A: An Artist Took Some Photos Of His Transition To 'Male'. They're Really Worth Seeing.  [CTR 3.09%]
+  B: 9 Fantastic Photos Show One Person's Transition To Becoming A 'Male'  [CTR 1.99%]
+  C: 9 Photos Show One Artist's Transition 'Male'  [CTR 2.05%]
+  Outcome: Winner A
+
+Example 6 (3 options)
+  A: This Little Girl's Health Issues Are Totally Solvable. If Only She Didn't Live In The U.S.  [CTR 0.43%]
+  B: This Little Girl's Disease Is Highly Predictable And Manageable. Too Bad She Lives In America.  [CTR 0.58%]
+  C: This Little Girl's Disease Is Totally Manageable. Too Bad She Lives In The Wrong Country.  [CTR 0.50%]
+  Outcome: TIE
+
+Example 7 (2 options)
+  A: 84 Seconds Of Proof That Some Companies Care About More Than Just Their Bottom Line  [CTR 1.28%]
+  B: Watch This Ridiculously Adorable And Uplifting Video Of A Huge Company Actually Doing Good Stuff  [CTR 2.27%]
+  Outcome: Winner B
+
+Example 8 (2 options)
+  A: She Told Her Daughter That She Might Quit Her Job. She'll Never Forget The 12 Year Old's Reply.  [CTR 1.91%]
+  B: Her Daughter's School Hosts A "Mother's Tea" Every Week. Here's Why That Not A Good Idea.  [CTR 1.01%]
+  Outcome: Winner A
+
+Example 9 (3 options)
+  A: The Wakeup Call That Left Arianna Huffington Rethinking Her Idea of Success  [CTR 0.82%]
+  B: Arianna Huffington Launched A Media Empire And Then Woke Up To A Serious Reality  [CTR 1.82%]
+  C: A Woman Who Seemed To Have It All Found Something Big Missing In Her Recipe For Success  [CTR 0.92%]
+  Outcome: Winner B
+
+Example 10 (3 options)
+  A: The One Where The Government Decides To Cook Your Books For You  [CTR 0.56%]
+  B: The Feds Will Not Be Cutting Your Social Security. They'll Just Be Decreasing Your Benefits By 10%.  [CTR 0.51%]
+  C: I Can't Believe What The Government Is Planning To Do To Your Grandma  [CTR 1.38%]
+  Outcome: Winner C
+
+Example 11 (2 options)
+  A: Could A Glitch In The System Bring Wall Street To Its Knees?  [CTR 1.12%]
+  B: The New York Stock Exchange Is Dominated By Computers. That’s Not A Good Thing.  [CTR 0.56%]
+  Outcome: Winner A
+
+Example 12 (4 options)
+  A: A Father Tells Other Men How To Treat His Daughter — In The Most Feminist Way Ever  [CTR 0.90%]
+  B: A Video For The Next Time You Hear Someone Tell A Dad, 'You Gotta Protect Your Girl From Boys!'  [CTR 0.92%]
+  C: If There Were A 'Dad Of The Year' Award, This Guy Might Win It  [CTR 0.74%]
+  D: Men Asked Him What Guns He Uses To Get Boys Away From His Daughter. Hear His Response.  [CTR 0.99%]
+  Outcome: TIE
+
+Example 13 (4 options)
+  A: How It Took About 30 People For 1 Swimmer To Make History  [CTR 0.33%]
+  B: You May Already Know About Her Epic Swim From Cuba To Florida, But Do You Know What Happened After?  [CTR 1.09%]
+  C: She Got All The Fame For Her Amazing Journey, But She Wants You To Know She Didn't Do It Alone  [CTR 0.31%]
+  D: Diana Nyad Had Only 3 Things To Say After Her Historic Swim And They're All Worth Hearing  [CTR 0.52%]
+  Outcome: Winner B
+
+Example 14 (4 options)
+  A: The Story Of The Sweet, Demure Girl And The Rough, Tough Boy Are Old News. Here's What's Next.  [CTR 1.78%]
+  B: Having A Baby Shower? Let's Keep The Cupcakes, But Leave The Gender Balloons At The Door.  [CTR 0.97%]
+  C: Baby Showers Usually Lead With: "It's A Girl!" Or "It's A Boy!" Here's Why That's A Problem  [CTR 3.31%]
+  D: We Don't Shout From The Rooftops, "She Has Brown Hair!" So Why Do We Get So Jazzed About Gender?  [CTR 1.37%]
+  Outcome: Winner C
+
+Example 15 (4 options)
+  A: One Animal Shelter's Dogs Rescue 5000 Office Workers. I'd Wag My Tail If I Had One.  [CTR 0.64%]
+  B: One Animal Shelter Had It With Rescuing Dogs, So They Started Rescuing Humans  [CTR 1.31%]
+  C: Sad Pet Adoption Ads Stopped Working, So One Animal Shelter Came Up With A Brilliant New Idea  [CTR 2.05%]
+  D: How One Animal Shelter Stopped Worrying About Its Animals And Started Worrying About Humans  [CTR 1.10%]
+  Outcome: Winner C
+
+Example 16 (4 options)
+  A: These Before-And-Afters Will Make You Question Everything About How Our Economy Works  [CTR 0.30%]
+  B: They Called It A 'Hurricane Without Water.' Here's What Caused The Storm.  [CTR 0.19%]
+  C: See How A Family Neighborhood Was Transformed Into A Disaster Zone  [CTR 0.13%]
+  D: See What Happened To These Homes Just A Few Years After The Meltdown  [CTR 0.16%]
+  Outcome: TIE
+
+Example 17 (2 options)
+  A: Meet The 17-Year-Old Whizz Who Thinks Failing Is Awesome. I'm Pretty Sure You'll Agree.  [CTR 0.56%]
+  B: At 17 He Goes To School, Gets Picked Up By His Mom - Oh And Saves Lives (Maybe Even Yours)  [CTR 1.22%]
+  Outcome: Winner B
+
+Example 18 (2 options)
+  A: These People Committed Political Suicide For Gun Control. Guess Where They're NOT From.  [CTR 1.05%]
+  B: The Politicians Who Committed Political Suicide For Gun Control Have One Thing In Common  [CTR 0.92%]
+  Outcome: TIE
+
+Example 19 (2 options)
+  A: A Lot Of Celebs Stare Awkwardly At The Camera Without Saying A Word. Here's Why They're So Quiet.  [CTR 2.17%]
+  B: A Bunch Of Celebs Have Actually Shut Up About Ebola  [CTR 2.21%]
+  Outcome: TIE
+
+Example 20 (3 options)
+  A: "Mom, you're probably going to want to sit down for this. I'm straight."  [CTR 0.94%]
+  B: The best thing about the gay wedding was this straight guy's reaction to it.  [CTR 1.00%]
+  C: "Mom, Dad, I don't know how to say it, so I'm just going to say it. I'm straight." "NOOOOO!"  [CTR 0.81%]
+  Outcome: TIE
+
+Example 21 (3 options)
+  A: President Obama Rationally, Passionately, And Emphatically Calls Out The Senate For Betraying Us  [CTR 2.35%]
+  B: That One Time The Senate Ignored 90% Of Americans So That The NRA Wouldn't Be Mean To Them  [CTR 1.03%]
+  C: 46 Senators Decided The NRA Was More Important Than Your Family. Obama Had Some Words For Them.  [CTR 1.37%]
+  Outcome: Winner A
+
+Example 22 (2 options)
+  A: What Would An Honest Coca-Cola Commercial Look Like?  [CTR 3.04%]
+  B: The Brutally Honest Coca-Cola Commercial You'll Never See On Air  [CTR 4.80%]
+  Outcome: Winner B
+
+Example 23 (3 options)
+  A: Seeing A Stray Dog Kiss Her Newborn After A Rescue, Gave Me Every Kind Of Emotion  [CTR 0.78%]
+  B: If You Liked Channing Tatum Before, Wait Till You See What He's Doing For These 4 Puppies  [CTR 0.79%]
+  C: A Pitbull Hid Her Newborns Behind A Tree, That's When The Whole Neighborhood Got Involved  [CTR 1.52%]
+  Outcome: Winner C
+
+Example 24 (2 options)
+  A: The History Textbook Entry On President Obama Should Probably Include These Unflattering Facts  [CTR 2.47%]
+  B: Is This How We'll Remember President Obama?  [CTR 1.37%]
+  Outcome: Winner A
+
+Example 25 (2 options)
+  A: A Hidden Truth About Organic Food That's Going To Make You Feel Better About That Arugula.  [CTR 0.69%]
+  B: Here's A Little Bit Of Science And A Little Bit Of Math That Will Make You Think A Lot About Food  [CTR 0.77%]
+  Outcome: TIE
+
+Example 26 (4 options)
+  A: Al Franken Forced To Use Kid's Analogy To Help Other Senators Understand That Science Is Real  [CTR 2.52%]
+  B: Senator Franken Forced To Use Kid's Analogy To Help Other Senators Comprehend That Science Is Real  [CTR 2.17%]
+  C: Senator Franken Forced To Use Kid's Analogy To Help Other Senators Understand That Science Is Real  [CTR 2.25%]
+  D: Senator Franken Forced To Use Kid's Snacks To Help Other Senators Understand That Science Is Real  [CTR 2.10%]
+  Outcome: TIE
+
+Example 27 (3 options)
+  A: Personally, I Think The 'Melting Pot' Is Wonderful. And I'm Not Talking About The Restaurant.  [CTR 0.32%]
+  B: The Real Immigration 'Problem' Is That Most People Have No Idea What They're Talking About  [CTR 1.32%]
+  C: Imagine For A Second That Your Great-Great-Grandparents Were Told To 'Go Back Home'  [CTR 0.60%]
+  Outcome: Winner B
+
+Example 28 (2 options)
+  A: A Homophobic Preacher's Message Was Stopped Short By The Students He Was Hoping To Reach  [CTR 1.03%]
+  B: How A Group Of Students Decided To Fight Homophobia  [CTR 0.49%]
+  Outcome: Winner A
+
+Example 29 (3 options)
+  A: All The Things Feminism Stands For. Also Known As All The Things You Stand For. I Think.  [CTR 0.90%]
+  B: All The Things You Think About Feminism Are Probably Pretend Things. Just Sayin'.  [CTR 1.07%]
+  C: If Feminism Scares You, Then You Are In The Wrong Movie Theatre  [CTR 0.74%]
+  Outcome: TIE
+
+Example 30 (4 options)
+  A: Hey, Joan Rivers, We’ve All Got Insecurities. But That’s No Excuse For Being A Dick.  [CTR 1.10%]
+  B: Joan Rivers Picks On Adele. Then This Comedian Turns It Into A (NSFW) Teaching Moment.  [CTR 1.93%]
+  C: This Smackdown Almost Makes Me Feel Bad For Joan Rivers. Almost.  [CTR 1.07%]
+  D: Newsflash: If You Make Fat Jokes About Women, You’re Being A Dick  [CTR 1.00%]
+  Outcome: Winner B
+=== EXAMPLES END ===
+
+Now the quiz. The attached file quiz_95_blind.csv has 95 tests. Columns: id, n_options, headline_A, headline_B, headline_C, headline_D (empty if the test had fewer options).
+
+For each test:
+1. Give every option a score from 0 to 100 for how likely a typical reader is to click it.
+2. Then give your answer: the letter of the option that clearly won, or TIE if the options would perform about the same.
+
+Rules:
+- Judge each test on its own. Do not try to guess patterns in the answer letters.
+- Do not search the web or look up the original articles.
+- Leave the score blank for options that do not exist.
+
+Output only one CSV code block with this header, one row per test, all 95 rows, in the same order as the file:
+id,score_A,score_B,score_C,score_D,answer
+If you run out of space, stop at the end of a row; I will type "continue" and you continue from the next row without repeating the header.

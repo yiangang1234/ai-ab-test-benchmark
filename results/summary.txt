@@ -1,0 +1,58 @@
+== Test pool (2-4 option headline tests, 1,000+ impressions per option)
+tests: 1123  by options: {2: 237, 3: 196, 4: 690}
+clear winner (runner-up p < 0.001): 45 (4.0%)
+no detectable difference (chi-square p > 0.5): 231 (20.6%)
+inconclusive (neither): 847 (75.4%)
+
+== Quiz: 95 tests (45 clear winner, 50 no detectable difference)
+baseline random answer (options + TIE): 25.9%   always 'TIE': 52.6%   random pick on winner tests: 35.2%
+quiz95_baseline_run1.csv: all 60.0%  winner 66.7%  no-difference 54.0%  TIE answers 35
+quiz95_baseline_run2.csv: all 51.6%  winner 71.1%  no-difference 34.0%  TIE answers 20
+quiz95_baseline_run3.csv: all 60.0%  winner 60.0%  no-difference 60.0%  TIE answers 42
+mean of 3 runs: all 57.2%  winner 65.9% (range 60.0%-71.1%)  no-difference 49.3%
+285 answers, 163 correct; one-sided binomial vs random answer: p = 6.7e-29
+
+30 solved examples: 56.8% vs baseline run1 60.0%; only-baseline 9, only-examples 6, McNemar p = 0.61
+
+== Train set: 100 different tests (36 winner at p < 0.01, 64 no detectable difference)
+train100_baseline_run1.csv: all 57.0%  winner 50.0%  no-difference 60.9%  TIE answers 49
+train100_baseline_run2.csv: all 42.0%  winner 66.7%  no-difference 28.1%  TIE answers 19
+train100_baseline_run3.csv: all 43.0%  winner 58.3%  no-difference 34.4%  TIE answers 23
+
+score gap (top - 2nd), run1: winner tests 7.8, no-difference tests 4.2
+threshold t (gap <= t -> TIE): balanced accuracy
+  t=-1: winner 63.9%  no-diff 0.0%  balanced 31.9%
+  t= 0: winner 58.3%  no-diff 42.2%  balanced 50.3%
+  t= 1: winner 58.3%  no-diff 51.6%  balanced 54.9%
+  t= 2: winner 58.3%  no-diff 51.6%  balanced 54.9%
+  t= 3: winner 58.3%  no-diff 53.1%  balanced 55.7%
+  t= 4: winner 55.6%  no-diff 54.7%  balanced 55.1%
+  t= 5: winner 44.4%  no-diff 62.5%  balanced 53.5%
+  t= 6: winner 41.7%  no-diff 64.1%  balanced 52.9%
+  t= 7: winner 30.6%  no-diff 78.1%  balanced 54.3%
+  t= 8: winner 30.6%  no-diff 81.2%  balanced 55.9%
+  t= 9: winner 30.6%  no-diff 81.2%  balanced 55.9%
+  t=10: winner 25.0%  no-diff 85.9%  balanced 55.5%
+  t=11: winner 25.0%  no-diff 87.5%  balanced 56.2%
+  t=12: winner 13.9%  no-diff 95.3%  balanced 54.6%
+  t=13: winner 13.9%  no-diff 96.9%  balanced 55.4%
+  t=14: winner 11.1%  no-diff 96.9%  balanced 54.0%
+  t=15: winner 11.1%  no-diff 100.0%  balanced 55.6%
+best t=11 applied once to quiz baseline run1: 60.0% -> 53.7%
+
+== Consistency across 3 fresh chats
+quiz 95: same answer 3/3 -> 58 tests, 67.2% correct | split -> 37 tests, majority 48.6% | Fisher p = 0.0563
+   'no difference' 3/3 -> 15/17 (88.2%) real test also found no detectable difference (base rate 52.6%)
+   same letter 3/3 -> 24/41 (58.5%) correct | majority vote overall 60.0%
+train 100: same answer 3/3 -> 54 tests, 61.1% correct | split -> 46 tests, majority 26.1% | Fisher p = 0.0004
+   'no difference' 3/3 -> 17/18 (94.4%) real test also found no detectable difference (base rate 64.0%)
+   same letter 3/3 -> 16/36 (44.4%) correct | majority vote overall 45.0%
+
+== Are the 'no detectable difference' tests equivalent? (best vs worst option)
+quiz 95 (50 tests): median CTR 1.1%, median best-worst gap 0.16pp, median 95% CI half-width +/-0.49pp, median upper 90% CI of relative lift +78%
+   equivalent by TOST (upper 90% CI of relative lift below margin): +/-10%: 0/50, +/-20%: 0/50, +/-30%: 0/50, +/-50%: 11/50
+train 100 (64 tests): median CTR 1.1%, median best-worst gap 0.19pp, median 95% CI half-width +/-0.50pp, median upper 90% CI of relative lift +83%
+   equivalent by TOST (upper 90% CI of relative lift below margin): +/-10%: 0/64, +/-20%: 0/64, +/-30%: 4/64, +/-50%: 13/64
+
+== Memorization check (30 quiz headlines, first half given)
+said recognized: 0/30  exact: 0  similarity >= 0.8: 0  >= 0.5: 1  mean 0.13
