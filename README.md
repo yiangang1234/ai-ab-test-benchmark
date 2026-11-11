@@ -93,7 +93,7 @@ The archive has been public since 2021, so the model may have seen it. Given the
 
 ## Next
 
-1. **Natural-mix confirmatory test** on the held-out confirmatory dataset, keeping the real proportions. Key metric: of the tests the AI flags as "no difference" 3/3, how many actually had a clear winner (what you would miss by skipping them).
+1. **Natural-mix confirmatory test** on the held-out confirmatory dataset, keeping the real proportions. Key metric: of the tests the AI flags as "no difference" 3/3, how many actually had a clear winner (what you would miss by skipping them). The plan, metrics, analysis code and answer-key hashes were committed **before** any run: see [PREREGISTRATION.md](PREREGISTRATION.md).
 2. **Leaderboard:** run other AI models and synthetic-audience tools on the same sets.
 
 ## Repository

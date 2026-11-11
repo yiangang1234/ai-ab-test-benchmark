@@ -1,0 +1,17 @@
+You will predict the outcome of real headline tests from Upworthy, a US viral-news website (2013-2015).
+In each test, real Facebook-era readers were randomly split, and each group saw one headline option. The option with the highest click-through rate (CTR) won.
+
+The attached file holdout_A_blind.csv has 100 tests. Columns: id, n_options, headline_A, headline_B, headline_C, headline_D (empty if the test had fewer options).
+
+For each test:
+1. Give every option a score from 0 to 100 for how likely a typical reader is to click it.
+2. Then give your answer: the letter of the option that clearly won, or TIE if the options would perform about the same.
+
+Rules:
+- Judge each test on its own. Do not try to guess patterns in the answer letters.
+- Do not search the web or look up the original articles.
+- Leave the score blank for options that do not exist.
+
+Output only one CSV code block with this header, one row per test, all 100 rows, in the same order as the file:
+id,score_A,score_B,score_C,score_D,answer
+If you run out of space, stop at the end of a row; I will type "continue" and you continue from the next row without repeating the header.
