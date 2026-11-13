@@ -5,9 +5,31 @@ Everything here (test sets, prompts, raw AI answers, scripts) is public so anyon
 
 - Data: [Upworthy Research Archive](https://upworthy.natematias.com/) (Matias, Munger, Aubin Le Quere & Ebersole, 2021), exploratory set
 - AI: Claude Opus 5.5 (claude.ai chat), same prompt in 3 separate fresh chats, no web search
-- Status: first results. A held-out confirmatory run with the natural mix of outcomes is in progress (see [Next](#next))
+- Status: first results (Nov 2) **plus a pre-registered holdout test on 200 new tests with the natural mix of outcomes (Nov 13)**. The holdout changed the conclusion; read it first.
 
-## Key results
+## Update, Nov 13: pre-registered holdout test (natural mix)
+
+The first results used a quiz that over-represented clear winners. So I ran a second test that was fixed in advance: plan, metrics, analysis code and answer-key hashes were committed **before** any AI run ([PREREGISTRATION.md](PREREGISTRATION.md)). 200 tests were drawn at random from the archive's untouched confirmatory set: 7 clear winners, 32 no detectable difference, 161 inconclusive. Same model, same prompt, 3 fresh chats per test. The answer keys are now in [`holdout_key/`](holdout_key) and match the pre-registered hashes. Full output: [`results/holdout_summary.txt`](results/holdout_summary.txt).
+
+**1. The "skip this test" signal did not replicate. ❌** In the first round, when the AI said "no difference" 3 times in a row, the real test also found no difference 88–94% of the time. On the natural mix it flagged 35 tests, and only 6 of them (17%, 95% CI 8–33%) had no detectable difference, which is *no better* than the 20% base rate (pre-registered H1: p = 0.73). Most flagged tests (28/35) were simply inconclusive. The earlier number came from a quiz that contained only clear winners and no-difference tests, which made the signal look stronger than it is. **I withdraw that claim.**
+
+**2. Picking the AI's favorite headline works. ✅**
+
+![AI pick lift](charts/4_holdout_ai_pick_lift.png)
+
+Across all 200 tests, the option the AI scored highest got **+9.6% more clicks than the average option** (bootstrap 95% CI +5.8% to +13.6%; per run +7.7%, +10.3%, +10.8%). For scale, the true best option was +32.9% and the worst −27.9%, so the AI captures roughly 29% of the possible gain. The AI's pick was above average in 62% of tests. This was a pre-registered secondary metric.
+
+**3. Picking clear winners: too few to tell.** On the 7 clear-winner tests the AI chose the true best option 43% of the time on average (runs: 57%, 43%, 29%) vs 36% for a random pick.
+
+Other pre-registered numbers: none of the 200 tests was equivalent within ±20% (TOST), as predicted in the pre-registration; the AI gave the same answer in all 3 runs on 121/200 tests; "TIE" answers per run were 50, 45 and 74.
+
+Exploratory, not pre-registered: the lift was +11.9% on 4-option tests (n=151), +8.8% on 3-option tests (n=15) and 0.0% on 2-option tests (n=34). Averaging the 3 runs' scores before picking gave +9.8%, about the same as a single run.
+
+**What this means in practice:** an AI is not a reliable judge of *whether* a test is worth running, but when you have to pick one headline without testing (low traffic, a one-shot launch), letting it rank your options is better than guessing, by about 10% in clicks on this data.
+
+## First results (Nov 2, quiz of 95 tests)
+
+### Key results
 
 ![Most tests have no clear winner](charts/1_most_tests_no_winner.png)
 
@@ -21,7 +43,7 @@ Everything here (test sets, prompts, raw AI answers, scripts) is public so anyon
 
 ![Consistency across runs](charts/3_consistency.png)
 
-**4. Consistency across runs is a useful confidence signal.** When the AI said "no difference" in all 3 chats, the real test also found **no detectable difference 88% of the time (15/17)**. On 100 different tests, used only to confirm this, it was **94% (17/18)**. When its answers disagreed across chats, it was right only 26–49% of the time.
+**4. Consistency across runs looked like a useful confidence signal (did not replicate on the natural mix, see the update above).** When the AI said "no difference" in all 3 chats, the real test also found **no detectable difference 88% of the time (15/17)**. On 100 different tests, used only to confirm this, it was **94% (17/18)**. When its answers disagreed across chats, it was right only 26–49% of the time.
 
 The practical reading: **"at this traffic, this test probably won't produce a detectable winner."** It does **not** mean the headlines perform the same (see [Definitions](#definitions-and-an-important-correction)).
 
@@ -89,20 +111,22 @@ The archive has been public since 2021, so the model may have seen it. Given the
 - Small samples (95 + 100 tests) and one model.
 - 2013–2015 US viral-news headlines; results may not transfer to ads, emails or other audiences.
 - The AI was confident enough to say "no difference" 3/3 times on only ~18% of tests, and it misses most no-detectable-difference tests.
-- The quiz over-represents clear winners (45/95) compared with reality (4%). A natural-mix test is next.
+- The first quiz over-represented clear winners (45/95) compared with reality (4%); the holdout test fixes this.
 
 ## Next
 
-1. **Natural-mix confirmatory test** on the held-out confirmatory dataset, keeping the real proportions. Key metric: of the tests the AI flags as "no difference" 3/3, how many actually had a clear winner (what you would miss by skipping them). The plan, metrics, analysis code and answer-key hashes were committed **before** any run: see [PREREGISTRATION.md](PREREGISTRATION.md).
-2. **Leaderboard:** run other AI models and synthetic-audience tools on the same sets.
+1. ~~Natural-mix confirmatory test~~ done, see the update at the top.
+2. **Leaderboard:** run other AI models and synthetic-audience tools on the same 200 holdout tests, scored by the CTR lift of their top pick.
+3. **One-shot launches:** test whether ranking options this way helps where A/B testing is impossible (e.g. crowdfunding campaign pages).
 
 ## Repository
 
 ```
-data/       test sets built from the archive (quiz_95_blind.csv is what the AI saw; *_answer_key.csv are the answers)
+data/       test sets built from the archive (*_blind.csv is what the AI saw; *_answer_key.csv are the answers)
+holdout_key/  answer keys of the holdout test, published after all runs (hashes in PREREGISTRATION.md)
 prompts/    the exact prompts used
 results/    raw AI answers (CSV, as returned) and summary.txt
-scripts/    build_sets.py, analyze.py, charts.py
+scripts/    build_sets.py, analyze.py, build_holdout.py, analyze_holdout.py, charts.py
 charts/     the three charts
 ```
 
@@ -114,6 +138,9 @@ pip install -r requirements.txt
 python scripts/build_sets.py path/to/upworthy-archive-exploratory-packages-03.12.2020.csv   # rebuilds data/ and prompts/ (fixed seeds)
 python scripts/analyze.py                                                                  # recomputes every number above
 python scripts/charts.py
+# holdout test: download the confirmatory packages CSV from the same OSF page
+python scripts/build_holdout.py path/to/upworthy-archive-confirmatory-packages-03.12.2020.csv
+python scripts/analyze_holdout.py
 ```
 
 To test another model: give it `prompts/1_baseline.txt` with `data/quiz_95_blind.csv` attached in 3 fresh chats, save each CSV answer in `results/`, and add the file names to `analyze.py`.

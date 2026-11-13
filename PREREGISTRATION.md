@@ -59,4 +59,8 @@ holdout_key/holdout_all_options.csv  363d83b7d8475d960125042f665f43d836cffd17ca8
 
 ## Deviations log
 
-(none yet)
+None. All 6 runs came back complete and well-formed on the first try (2026-11-13); no chat was rerun.
+
+## Results
+
+See the Nov 13 update at the top of the [README](README.md) and [`results/holdout_summary.txt`](results/holdout_summary.txt). The answer keys in `holdout_key/` match the hashes above.

@@ -1,0 +1,20 @@
+== Sample: 200 tests drawn at random from the confirmatory pool (natural mix)
+labels: {'inconclusive': 161, 'no_difference': 32, 'winner': 7}  | pool shares: winner 4.1%, no detectable difference 20.1%
+equivalent within +/-20% (TOST): 0/200
+
+== Primary 1: AI said 'no difference' in all 3 runs -> 35 tests (17.5%)
+  no_difference: 6/35 = 17.1% (95% CI 8.1%-32.7%) vs pool 20.1%, one-sided (greater) p = 0.733
+  winner: 1/35 = 2.9% (95% CI 0.5%-14.5%) vs pool 4.1%, one-sided (less) p = 0.577
+  equivalent within +/-20%: 0/35 = 0.0% vs 0.0% in the whole sample
+  inconclusive: 28/35
+  clear winners the AI flagged (would be missed by skipping): 1 of 7
+
+== Primary 2: 7 clear-winner tests, AI picked the true best option
+  per run: 57%, 43%, 29% | mean 42.9% | random pick 35.7%
+
+== Secondary 3: CTR of the AI's top-scored option vs the average option (all 200 tests, mean of 3 runs)
+  mean relative lift +9.61% (bootstrap 95% CI +5.77% to +13.64%)
+
+== Secondary 4: same answer in all 3 runs: 121/200
+== Secondary 5: accuracy on the 39 non-inconclusive tests: 33%, 23%, 46%
+TIE answers per run: [50, 45, 74]

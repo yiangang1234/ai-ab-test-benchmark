@@ -97,3 +97,37 @@ fig.text(0.36, 0.085, "% correct. Share of no-detectable-difference tests in eac
          "Limits: the AI was this sure on only ~18% of tests, and 'no detectable difference' is not proof the headlines are equal.", fontsize=13, color=INK2, linespacing=1.5)
 fig.savefig(f"{OUT}/3_consistency.png", facecolor=SURF); plt.close(fig)
 print("ok")
+
+# 4) holdout: CTR lift of the AI's top pick (numbers from results/holdout_summary.txt and README)
+fig = base("Picking the AI's favorite headline: ~10% more clicks",
+           "200 real tests drawn at random (natural mix), pre-registered. CTR relative to the average option in each test",
+           foot="Data: Upworthy Research Archive (Matias et al., 2021), confirmatory set. AI: Claude Opus 5.5, same prompt, 3 fresh chats per test.")
+ax = fig.add_axes([0.30, 0.20, 0.62, 0.55])
+labels = ["Worst option (hindsight)", "Random pick", "AI's top-scored option", "Best option (hindsight)"]
+vals = [-27.9, 0.0, 9.6, 32.9]
+cols = [NEUTRAL, NEUTRAL, S1, NEUTRAL]
+ys = [3, 2, 1, 0]
+for y, v, c in zip(ys, vals, cols):
+    ax.barh(y, v, height=0.55, color=c, edgecolor=SURF, linewidth=2)
+lo, hi = 5.8, 13.6
+ax.plot([lo, hi], [1, 1], color=INK, linewidth=2, zorder=3)
+for x in (lo, hi):
+    ax.plot([x, x], [0.9, 1.1], color=INK, linewidth=2, zorder=3)
+for y, v in zip(ys, vals):
+    txt = f"{v:+.0f}%" if v else "0%"
+    if y == 1:
+        txt = "+9.6%   (95% CI +5.8% to +13.6%)"
+    xpos = hi + 1.5 if y == 1 else (v + 1.2 if v >= 0 else v - 1.2)
+    ax.text(xpos, y, txt, va="center", ha="left" if v >= 0 else "right", fontsize=19, color=INK,
+            weight="bold" if y == 1 else "normal")
+ax.axvline(0, color=INK2, linewidth=1)
+ax.set_yticks(ys); ax.set_yticklabels(labels)
+ax.set_facecolor(SURF)
+for s in ax.spines.values(): s.set_visible(False)
+ax.set_xlim(-45, 60); ax.xaxis.grid(True, color=GRID, linewidth=1); ax.set_axisbelow(True)
+ax.set_xticks([-40, -20, 0, 20, 40]); ax.set_xticklabels(["-40%", "-20%", "0%", "+20%", "+40%"])
+ax.tick_params(axis="x", colors=MUTED, labelsize=14, length=0)
+ax.tick_params(axis="y", colors=INK, labelsize=19, length=0, pad=12)
+fig.text(0.06, 0.12, "Per run: +7.7%, +10.3%, +10.8%. Random pick = average option = 0%. About 29% of the gain of always picking the true best. No gain on 2-option tests (n=34).",
+         fontsize=13, color=INK2)
+fig.savefig(f"{OUT}/4_holdout_ai_pick_lift.png", facecolor=SURF); plt.close(fig)
